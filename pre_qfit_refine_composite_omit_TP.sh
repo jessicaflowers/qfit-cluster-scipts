@@ -140,4 +140,4 @@ fi
 
 # Run composite omit map
 log "Running composite omit map"
-phenix.composite_omit_map "${pdb_id}.mtz" "${pdb_id}_001.pdb" omit-type=refine nproc=8 r_free_flags.generate=True exclude_bulk_solvent=True
+phenix.composite_omit_map "${pdb_id}.mtz" "${pdb_id}_001.pdb" omit-type=refine nproc="${NSLOTS:-1}" r_free_flags.generate=True exclude_bulk_solvent=True
